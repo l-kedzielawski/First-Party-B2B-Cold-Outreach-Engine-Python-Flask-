@@ -91,10 +91,10 @@ Each campaign is fully isolated at the data layer. The Flask server handles trac
 ## Screenshots
 
 ### Dashboard
-![Empty Dashboard Screenshot](docs/empty_dashboard.png)
+![Empty Dashboard Screenshot](docs/empty_dashboard-i.png)
 
 ### Sample Email
-![Sample Mail Template](docs/sample_mail_template.png)
+![Sample Mail Template](docs/sample_mail_template-i.png)
 
 
 ---
