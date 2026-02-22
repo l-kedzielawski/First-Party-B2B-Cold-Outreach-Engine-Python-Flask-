@@ -1,0 +1,100 @@
+<html>
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.6;
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 20px;
+      color: #222;
+    }
+    p, ul { margin-bottom: 14px; }
+    ul { padding-left: 20px; }
+    .cta-button {
+      display: inline-block;
+      background-color: #28a745;
+      color: #ffffff;
+      padding: 12px 24px;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 8px;
+    }
+    .footer {
+      margin-top: 30px;
+      font-size: 12px;
+      color: #888;
+    }
+    .footer a { color: #888; }
+    .signature {
+      margin-top: 30px;
+      border-top: 1px solid #ddd;
+      padding-top: 16px;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Open tracking pixel -->
+  <img src="{{ tracking_url }}/track_open?hash={{ email_hash }}&campaign={{ db_name }}"
+       width="1" height="1" alt="" style="display:none;" />
+
+  <p>Dzień dobry,</p>
+
+  <p>
+    Kontaktuję się, ponieważ zauważyłem, że Wasza firma działa w branży, w której jakość surowców
+    ma bezpośredni wpływ na końcowy produkt. Chciałem krótko zapytać, czy jest tu pole do
+    współpracy.
+  </p>
+
+  <p>
+    Reprezentuję <a href="{{ company_url }}">{{ company_name }}</a> – importera surowców premium
+    bezpośrednio od producentów. Brak pośredników oznacza dla Państwa lepszą cenę i pełną
+    kontrolę nad łańcuchem dostaw.
+  </p>
+
+  <p>Co odróżnia nas od innych dostawców:</p>
+  <ul>
+    <li>Bezpośredni import – żadnych marż pośredników</li>
+    <li>Stała dostępność towaru przez cały rok, wysyłka w 24 h z magazynu w Polsce</li>
+    <li>Certyfikaty jakości (BIO, Organic, Fairtrade) dostępne na każde żądanie</li>
+    <li>Elastyczne ilości zamówień – od próbek po dostawy paletowe</li>
+    <li>Dedykowany opiekun konta i bezpośredni kontakt z właścicielem</li>
+  </ul>
+
+  <p>
+    Jeśli brzmi to interesująco, kliknij przycisk poniżej – odezwę się z konkretną ofertą
+    dopasowaną do Waszej działalności.
+  </p>
+
+  <p>
+    <a href="{{ green_url }}" class="cta-button">Chcę zobaczyć ofertę</a>
+  </p>
+
+  <p>
+    Jeśli zakupy nie leżą w Twoim zakresie – proszę, przekaż tę wiadomość odpowiedniej osobie.
+    Z góry dziękuję.
+  </p>
+
+  <p>Pozdrawiam,<br />{{ sender_name }}</p>
+
+  <div class="signature">
+    <strong>{{ sender_name }}</strong><br />
+    {{ sender_title }}<br />
+    {{ company_name }}<br />
+    Tel: {{ sender_phone }}<br />
+    E-mail: <a href="mailto:{{ sender_email }}">{{ sender_email }}</a><br />
+    <a href="{{ company_url }}">{{ company_url }}</a>
+  </div>
+
+  <div class="footer">
+    <p>
+      Jeśli ta wiadomość dotarła do Ciebie przez pomyłkę – przepraszam.<br />
+      <a href="{{ privacy_url }}">Polityka prywatności</a> &nbsp;|&nbsp;
+      <a href="{{ red_url }}">Wypisz mnie / Nie kontaktuj się więcej</a>
+    </p>
+  </div>
+</body>
+</html>

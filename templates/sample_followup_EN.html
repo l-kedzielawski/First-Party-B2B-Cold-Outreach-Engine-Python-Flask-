@@ -1,0 +1,102 @@
+<html>
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.6;
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 20px;
+      color: #222;
+    }
+    p { margin-bottom: 14px; }
+    .cta-button {
+      display: inline-block;
+      background-color: #28a745;
+      color: #ffffff;
+      padding: 12px 24px;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 8px;
+    }
+    .quote-block {
+      border-left: 4px solid #28a745;
+      padding: 10px 16px;
+      margin: 20px 0;
+      background-color: #f9f9f9;
+      font-style: italic;
+      color: #444;
+    }
+    .footer {
+      margin-top: 30px;
+      font-size: 12px;
+      color: #888;
+    }
+    .footer a { color: #888; }
+    .signature {
+      margin-top: 30px;
+      border-top: 1px solid #ddd;
+      padding-top: 16px;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Open tracking pixel -->
+  <img src="{{ tracking_url }}/track_open?hash={{ email_hash }}&campaign={{ db_name }}"
+       width="1" height="1" alt="" style="display:none;" />
+
+  <p>Hi {{ first_name }},</p>
+
+  <p>
+    I reached out a little while ago about a potential supply partnership. I know inboxes get busy,
+    so I wanted to follow up with one concrete thing rather than another generic pitch.
+  </p>
+
+  <p>
+    One of our clients in a similar business to yours reduced their raw material cost by over 40%
+    after switching to direct import through us – without compromising on quality or certifications.
+  </p>
+
+  <div class="quote-block">
+    "We were skeptical at first, but the consistency and the response time won us over completely.
+    We haven't looked back." – B2B client, food manufacturing sector
+  </div>
+
+  <p>
+    I'm not asking for a commitment – just a 15-minute call to see whether there's a fit.
+    If there isn't, I'll say so upfront and won't follow up again.
+  </p>
+
+  <p>
+    <a href="{{ green_url }}" class="cta-button">Book a quick call</a>
+  </p>
+
+  <p>
+    Either way, feel free to reply directly to this email – I read every response personally.
+  </p>
+
+  <p>
+    Best regards,<br />
+    <strong>{{ sender_name }}</strong>
+  </p>
+
+  <div class="signature">
+    {{ sender_title }}<br />
+    {{ company_name }}<br />
+    Tel: {{ sender_phone }}<br />
+    E-mail: <a href="mailto:{{ sender_email }}">{{ sender_email }}</a><br />
+    <a href="{{ company_url }}">{{ company_url }}</a>
+  </div>
+
+  <div class="footer">
+    <p>
+      If you received this by mistake, I apologize.<br />
+      <a href="{{ privacy_url }}">Privacy Policy</a> &nbsp;|&nbsp;
+      <a href="{{ red_url }}">Unsubscribe / Do not contact me again</a>
+    </p>
+  </div>
+</body>
+</html>

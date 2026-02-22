@@ -1,0 +1,44 @@
+# ============================================================
+# Email Outreach System — Campaign Configuration
+# ============================================================
+# Copy this file to config.yaml and fill in your values.
+# config.yaml is gitignored and must never be committed.
+# The SMTP password is NOT stored here — use the
+# SMTP_PASSWORD environment variable instead.
+# ============================================================
+
+campaigns:
+
+  - name: campaign_name          # Unique identifier used in CLI --campaign flag
+    database: /path/to/leads.db  # Absolute path to SQLite database file
+
+    smtp:
+      server: mail.your-provider.com
+      port: 465                  # 465 for SSL, 587 for TLS
+      username: sender@yourdomain.com
+      from_email: sender@yourdomain.com
+      # Password is read from SMTP_PASSWORD environment variable
+
+    domain: https://your-tracking-domain.com/
+
+    email:
+      delay: 35                  # Seconds between each sent email (rate limiting)
+      subject: "Your email subject line here"
+
+    privacy_url: https://yourdomain.com/privacy-policy/
+    landing_page: https://yourdomain.com/landing-page/
+    email_template: email.html   # Filename relative to templates/ directory
+
+    # Optional: tracked link overrides per campaign
+    links:
+      company_link: https://yourdomain.com
+      shop_link: https://shop.yourdomain.com
+      buy_sample: https://shop.yourdomain.com/buy-sample
+      privacy_policy: https://yourdomain.com/privacy-policy/
+      landing_page: https://yourdomain.com/landing/
+
+  # Add more campaigns below following the same structure
+  # - name: campaign_germany
+  #   database: /path/to/germany.db
+  #   smtp:
+  #     ...

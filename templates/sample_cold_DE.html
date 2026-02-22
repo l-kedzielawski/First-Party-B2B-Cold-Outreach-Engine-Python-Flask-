@@ -1,0 +1,105 @@
+<html>
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.6;
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 20px;
+      color: #222;
+    }
+    p, ul { margin-bottom: 14px; }
+    ul { padding-left: 20px; }
+    .cta-button {
+      display: inline-block;
+      background-color: #28a745;
+      color: #ffffff;
+      padding: 12px 24px;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 8px;
+    }
+    .footer {
+      margin-top: 30px;
+      font-size: 12px;
+      color: #888;
+    }
+    .footer a { color: #888; }
+    .signature {
+      margin-top: 30px;
+      border-top: 1px solid #ddd;
+      padding-top: 16px;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Open tracking pixel -->
+  <img src="{{ tracking_url }}/track_open?hash={{ email_hash }}&campaign={{ db_name }}"
+       width="1" height="1" alt="" style="display:none;" />
+
+  <p>Sehr geehrte Damen und Herren,</p>
+
+  <p>
+    Sie erhalten täglich Angebote von Lieferanten – die meisten davon klingen gleich.
+    Ich möchte Ihnen kurz erklären, warum unsere Zusammenarbeit anders wäre.
+  </p>
+
+  <p>
+    Mein Name ist {{ sender_name }}, ich vertrete <a href="{{ company_url }}">{{ company_name }}</a>.
+    Wir importieren Rohstoffe direkt vom Produzenten – ohne Zwischenhändler. Das bedeutet für Sie
+    bessere Preise, stabile Qualität und eine zuverlässige Lieferkette.
+  </p>
+
+  <p>Was uns auszeichnet:</p>
+  <ul>
+    <li>Direktimport – keine Händlermargen, transparente Preisgestaltung</li>
+    <li>Lager in Polen – Lieferung innerhalb von 24 Stunden in die gesamte EU</li>
+    <li>Zertifizierte Qualität: BIO, Organic, Fairtrade auf Anfrage verfügbar</li>
+    <li>Flexible Bestellmengen – von Mustern bis zu Palettenlieferungen</li>
+    <li>Persönlicher Ansprechpartner, direkter Kontakt mit dem Inhaber</li>
+  </ul>
+
+  <p>
+    <strong>Wäre es sinnvoll, kurz zu prüfen, ob wir Ihnen bessere Konditionen als Ihr
+    aktueller Lieferant bieten können?</strong>
+  </p>
+
+  <p>
+    Klicken Sie auf den Button – ich melde mich persönlich mit einem konkreten Angebot.
+  </p>
+
+  <p>
+    <a href="{{ green_url }}" class="cta-button">Angebot anfordern</a>
+  </p>
+
+  <p>
+    Falls Sie nicht der richtige Ansprechpartner sind, leiten Sie diese Nachricht bitte gerne
+    weiter. Vielen Dank.
+  </p>
+
+  <p>
+    Mit freundlichen Grüßen,<br />
+    <strong>{{ sender_name }}</strong>
+  </p>
+
+  <div class="signature">
+    {{ sender_title }}<br />
+    {{ company_name }}<br />
+    Tel: {{ sender_phone }}<br />
+    E-Mail: <a href="mailto:{{ sender_email }}">{{ sender_email }}</a><br />
+    <a href="{{ company_url }}">{{ company_url }}</a>
+  </div>
+
+  <div class="footer">
+    <p>
+      Falls Sie diese Nachricht versehentlich erhalten haben, entschuldigen Sie bitte.<br />
+      <a href="{{ privacy_url }}">Datenschutzerklärung</a> &nbsp;|&nbsp;
+      <a href="{{ red_url }}">Kein Interesse / Bitte keine weiteren Nachrichten</a>
+    </p>
+  </div>
+</body>
+</html>

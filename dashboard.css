@@ -1,0 +1,188 @@
+/* Dashboard Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    color: #333;
+}
+
+h2 {
+    color: #555;
+}
+
+/* Table and Container Styling */
+.table-container {
+    overflow-x: auto;
+    width: 100%;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 24px;
+    text-align: left;
+    border-right: 1px solid #ddd; /* Vertical line between columns */
+}
+
+th:last-child, td:last-child {
+    border-right: none; /* Remove right border from the last column */
+}
+
+th {
+    background-color: #556036; /* Green header color */
+    color: white;
+    font-size: 18px; /* Bigger column titles */
+    font-weight: bold;
+    position: relative; /* For positioning the sort arrow */
+}
+
+th a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+th a::after {
+    content: " ↑↓"; /* Default arrows for sortable columns */
+    margin-left: 5px;
+    font-size: 12px;
+    opacity: 0.5;
+}
+
+/* Highlight the active sort column with a specific arrow */
+th[data-sort="active"][data-order="asc"] a::after {
+    content: " ↑";
+    opacity: 1;
+}
+
+th[data-sort="active"][data-order="desc"] a::after {
+    content: " ↓";
+    opacity: 1;
+}
+
+/* Enhanced contrast for table rows */
+tbody tr:nth-child(even) {
+    background-color: #e8ece5; /* Lighter green-gray for even rows */
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #d9dfd4; /* Darker green-gray for odd rows */
+}
+
+tbody tr:hover {
+    background-color: #c8d4be; /* More noticeable hover effect */
+}
+
+a {
+    color: #556036; /* Green link color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #3d4528; /* Darker green hover color */
+}
+
+/* Template Link Styling */
+.template-link {
+    color: #556036;
+    text-decoration: underline;
+}
+
+.template-link:hover {
+    color: #3d4528;
+}
+
+/* Filter Form Styling */
+.search-bar {
+    margin-bottom: 20px;
+}
+
+.search-bar input[type="text"] {
+    padding: 8px;
+    width: 200px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-bar button {
+    padding: 8px 15px;
+    background-color: #556036; /* Green button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #3d4528; /* Darker green hover color */
+}
+
+/* Action Form and Notes Input */
+.action-form {
+    display: inline;
+    margin-left: 10px;
+}
+
+.notes-input {
+    width: 200px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+select, button[type="submit"] {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+button[type="submit"] {
+    background-color: #556036;
+    color: white;
+    transition: 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #3d4528;
+}
+
+/* Hover effects for table headers when sorting */
+th a:hover {
+    color: #ffffff;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    table {
+        font-size: 12px;
+    }
+
+    .search-bar input[type="text"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .search-bar button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .notes-input {
+        width: 100%;
+    }
+}
