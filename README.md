@@ -101,5 +101,4 @@ Each campaign is fully isolated at the data layer. The Flask server handles trac
 
 ## Contact
 
-- **Email**: lukasz@kedzielawski.com 
-- **Portfolio**: [Portfolio](https://kedzielawski.com)
+- **Email**: l.kedzielawski@gmail.com
